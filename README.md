@@ -10,3 +10,4 @@ The book is available in [this repository](./step-by-step-into-argp.pdf). Or you
 1. [Adding a New Option](./src/step1.c)
 2. [Option with Argument](./src/step2.c)
 3. [Long Option](./src/step3.c)
+4. [Optional Argument](./src/step4.c)
