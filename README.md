@@ -15,3 +15,4 @@ The book is available in [this repository](./step-by-step-into-argp.pdf). Or you
 6. [Option with Only Long Option Name](./src/step6.c)
 7. [Support Certain Number of Arguments](./src/step7.c)
 8. [Hidden Options](./src/step8.c)
+9. [Version and Bug Reports](./src/step9.c)
