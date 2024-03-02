@@ -8,3 +8,4 @@ The book is available in [this repository](./step-by-step-into-argp.pdf). Or you
 
 0. [Your First Argp Program](./src/step0.c)
 1. [Adding a New Option](./src/step1.c)
+2. [Option with Argument](./src/step2.c)
