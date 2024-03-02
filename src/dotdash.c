@@ -1,23 +1,22 @@
 #include "dotdash.h"
-
 #include <stdlib.h>
 
 static int parse_opt(int key, char *arg, struct argp_state *state) {
-  switch (key) {
-  case 'd': {
-    unsigned int i;
-    unsigned int dots = 1;
-    if (arg != NULL)
-      dots = atoi(arg);
-    for (i = 0; i < dots; i++)
-      printf(".");
-    break;
-  }
-  case 888:
-    printf("-");
-    break;
-  }
-  return 0;
+    switch (key) {
+    case 'd': {
+        unsigned int i;
+        unsigned int dots = 1;
+        if (arg != NULL)
+            dots = atoi(arg);
+        for (i = 0; i < dots; i++)
+            printf(".");
+        break;
+    }
+    case 888:
+        printf("-");
+        break;
+    }
+    return 0;
 }
 static struct argp_option options[] = {
     {"dot", 'd', "NUM", OPTION_ARG_OPTIONAL, "Show some dots on the screen"},
