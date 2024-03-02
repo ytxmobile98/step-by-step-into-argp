@@ -13,3 +13,4 @@ The book is available in [this repository](./step-by-step-into-argp.pdf). Or you
 4. [Optional Argument](./src/step4.c)
 5. [Option Alias](./src/step5.c)
 6. [Option with Only Long Option Name](./src/step6.c)
+7. [Support Certain Number of Arguments](./src/step7.c)
