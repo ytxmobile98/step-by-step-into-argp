@@ -1,2 +1,6 @@
 step*
 !*.c
+
+# step 12: morse-tool
+morse-tool
+*.history

@@ -18,3 +18,4 @@ The book is available in [this repository](./step-by-step-into-argp.pdf). Or you
 9. [Version and Bug Reports](./src/step9.c)
 10. [Groups of Options](./src/step10.c)
 11. [Using Options from a Library](./src/step11.c)
+12. [Morse Tool](./src/morse-tool.c)
