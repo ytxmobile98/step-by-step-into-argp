@@ -1,22 +1,22 @@
+BUILD_FILES = $(EXECS) *.a *.o
+EXECS = $(STEPS)
+
+LIB_NAMES := dotdash
 STEPS := $(foreach step,$(shell ls step*.c),$(basename $(step)))
 
-DOTDASH := dotdash
-DOTDASH_C := $(DOTDASH).c
-DOTDASH_H := $(DOTDASH).h
-DOTDASH_O := $(DOTDASH).o
-LIBDOTDASH_A := lib$(DOTDASH).a
+.PHONY: all
+all: $(EXECS)
 
-all: $(STEPS)
+step11: step11.c libdotdash.a
+	$(CC) "$<" -L./ -ldotdash -o "$@"
 
-step11: step11.c $(LIBDOTDASH_A)
-	$(CC) $< -L./ -l$(DOTDASH) -o $@
+lib%.a: %.o
+	ar cru "$@" "$^"
+	ranlib "$@"
 
-$(LIBDOTDASH_A): $(DOTDASH_O)
-	ar cru $@ $^
-	ranlib $@
+%.o: %.c %.h
+	$(CC) -c -o "$@" "$<"
 
-$(DOTDASH_O): $(DOTDASH_C) $(DOTDASH_H)
-	$(CC) -c -o $@ $<
-
+.PHONY: clean
 clean:
-	rm -f $(STEPS) $(LIBDOTDASH_A) $(DOTDASH_O)
+	-rm -f $(BUILD_FILES)
