@@ -7,3 +7,4 @@ The book is available in [this repository](./step-by-step-into-argp.pdf). Or you
 ## Steps
 
 0. [Your First Argp Program](./src/step0.c)
+1. [Adding a New Option](./src/step1.c)
